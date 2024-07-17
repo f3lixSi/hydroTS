@@ -111,7 +111,7 @@ server <- function(input, output) {
                      sep = as.character(input$sepFormat), 
                      dec = as.character(input$decFormat), 
                      header = input$header,
-                     col.names = c("date","value"))
+                     col.names = c("date","value","test"))
       df$date <- as.POSIXct(df$date, format = as.character(input$dateLabel))
       return(df)
     } else if(input$dataFormat=="dtv") {
